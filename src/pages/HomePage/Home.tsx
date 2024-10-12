@@ -24,6 +24,7 @@ import { PageWrapper } from "../../components/PageWrapper/PageWrapper";
 import GainExperiencePage from "../GainExperiencePage/GainExperiencePage";
 import TalkWithMentorPage from "../TalkWithMentorPage/TalkWithMentorPage";
 import FightBossesPage from "../FightBossesPage/FightBossesPage";
+import CustomizePage from '../CustomizePage/CustomizePage';
 
 const Home: React.FC = () => {
   return (
@@ -33,6 +34,7 @@ const Home: React.FC = () => {
               <Route path="/home/gain-experience" exact component={GainExperiencePage} />
               <Route path="/home/talk-with-mentor" exact component={TalkWithMentorPage} />
               <Route path="/home/fight-bosses" exact component={FightBossesPage} />
+              <Route path="/home/gain-experience/customize" exact component={CustomizePage} />
               <Redirect exact from="/home" to="/home/gain-experience" />
           </IonRouterOutlet>
           <IonTabBar className={styles.tabs} slot="bottom">

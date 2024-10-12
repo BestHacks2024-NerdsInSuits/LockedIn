@@ -1,0 +1,41 @@
+/* Page Title */
+.pageTitle {
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  padding: 10px 0;
+}
+
+/* Customization Card */
+.customizationCard {
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #dedbb8; /* Use your primary color */
+}
+
+/* Character Image */
+.characterImage {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #89886f; /* Use your secondary color */
+}
+
+/* Card Content */
+.cardContent {
+  padding: 10px;
+}
+
+.cardContent h3 {
+  font-size: 1rem;
+  color: #1B1B1B; /* Main black color */
+  margin-bottom: 8px;
+}
+
+.cardContent IonButton {
+  --background: #89886f; /* Secondary color */
+  --border-radius: 5px;
+  --border-color: #89886f;
+  --color: #dedbb8; /* Primary color */
+}

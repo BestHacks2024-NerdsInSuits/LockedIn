@@ -27,7 +27,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({ title, large     }) => {
 
     return (
         <IonHeader className={styles.pageHeader} collapse={large ? "condense" : "undefined" as any}>
-            <IonToolbar color="primary">
+            <IonToolbar color="{#dedbb8}">
                 {router.routeInfo.prevRouteLastPathname != "/sign-up" && (
                     <IonButtons slot="start">
                         <IonBackButton></IonBackButton>

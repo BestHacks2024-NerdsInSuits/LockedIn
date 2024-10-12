@@ -2,28 +2,22 @@
 http://ionicframework.com/docs/theming/ */
 // src/theme/variables.scss
 
-// Define your custom colors
-$main-black:    #1B1B1B;
-$main-white:    #EFEBDF;
-$primary-blue:  #27367F;
-$secondary-blue: #1D1856;
-
 // Core variables
 :root {
   // Ionic Colors
-  --ion-color-primary:            #27367F;  // Primary Blue
-  --ion-color-primary-rgb:        39, 54, 127;
-  --ion-color-primary-contrast:   #EFEBDF;  // Contrast color (white)
-  --ion-color-primary-contrast-rgb: 239, 235, 223;
-  --ion-color-primary-shade:      #212C70;  // Darker version of primary
-  --ion-color-primary-tint:       #3A4B9B;  // Lighter version of primary
-
-  --ion-color-secondary:          #1D1856;  // Secondary Blue
-  --ion-color-secondary-rgb:      29, 24, 86;
-  --ion-color-secondary-contrast: #EFEBDF;  // Contrast color (white)
+  --ion-color-primary:            #dedbb8;  // New Primary Color
+  --ion-color-primary-rgb:        222, 219, 184;
+  --ion-color-primary-contrast:   #1B1B1B;  // Contrast color (black)
+  --ion-color-primary-contrast-rgb: 27, 27, 27;
+  --ion-color-primary-shade:      #c4c3a5;  // Darker version of primary
+  --ion-color-primary-tint:       #e3e1c0;  // Lighter version of primary
+  
+  --ion-color-secondary:          #89886f;  // New Secondary Color
+  --ion-color-secondary-rgb:      137, 136, 111;
+  --ion-color-secondary-contrast: #EFEBDF;  // Contrast color (light)
   --ion-color-secondary-contrast-rgb: 239, 235, 223;
-  --ion-color-secondary-shade:    #19144A;  // Darker version of secondary
-  --ion-color-secondary-tint:     #312E75;  // Lighter version of secondary
+  --ion-color-secondary-shade:    #76755e;  // Darker version of secondary
+  --ion-color-secondary-tint:     #9d9c80;  // Lighter version of secondary
 
   --ion-color-tertiary:           #EFEBDF;  // Main White
   --ion-color-tertiary-rgb:       239, 235, 223;
