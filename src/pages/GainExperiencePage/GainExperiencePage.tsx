@@ -15,9 +15,10 @@ const GainExperiencePage: React.FC = () => {
                 {/* Profile Section */}
                 <div className={styles.profileContainer}>
                     <img className={styles.avatar} src="assets/img/avatar1.png" alt="Profile" />
-                    <h2 className={styles.profileName}>Patryk</h2>
-                    <p className={styles.profileLevel}>Lvl. 3</p>
-
+                    <div className={styles.nameLevelContainer}>
+                        <h2 className={styles.profileName}>Patryk</h2>
+                        <p className={styles.profileLevel}>Lvl. 3</p>
+                    </div>
                     {/* Progress Bar Container with text on both sides */}
                     <div className={styles.progressContainer}>
                     <span className={styles.progressLabelLeft}>Level:</span>

@@ -96,4 +96,10 @@
     color: #EFEBDF;
   }
   
+  .nameLevelContainer {
+    display: flex;
+    align-items: bottom;
+    align-items: baseline;
+    gap: 0.5em;
+  }
   

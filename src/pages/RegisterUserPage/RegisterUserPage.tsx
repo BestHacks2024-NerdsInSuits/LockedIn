@@ -14,7 +14,7 @@ import {
 
 import styles from './RegisterUserPage.module.css';
 
-import character from "../../images/character.png";
+import character from "/assets/img/LockInLock.png";
 
 import { useState } from "react";
 import {PageWrapper} from "../../components/PageWrapper/PageWrapper";
