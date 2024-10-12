@@ -1,4 +1,4 @@
-import { clipboardOutline, codeOutline, desktopOutline, documentOutline } from "ionicons/icons";
+import { brushOutline, clipboardOutline, codeOutline, desktopOutline, documentOutline, personAddOutline } from "ionicons/icons";
 import { PageWrapper } from "../../components/PageWrapper/PageWrapper";
 import {IonAvatar, IonButton, IonButtons, IonContent, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonNote, IonProgressBar, IonSegment, IonSegmentButton, IonTitle, IonToolbar} from "@ionic/react";
 import styles from "./GainExperiencePage.module.css";
@@ -19,14 +19,18 @@ const GainExperiencePage: React.FC = () => {
                         <h2 className={styles.profileName}>Patryk</h2>
                         <p className={styles.profileLevel}>Lvl. 3</p>
                     </div>
-                    {/* Progress Bar Container with text on both sides */}
-                    <div className={styles.progressContainer}>
-                    <span className={styles.progressLabelLeft}>Level:</span>
-                    <IonProgressBar value={0.23} className={styles.progressBar}></IonProgressBar> {/* Green progress bar */}
-                    <span className={styles.progressLabelRight}>23%</span>
+                {/* Profile Buttons */}
+                    <div className={styles.profileButtonsContainer}>
+                        <IonButton className={styles.findFriendButton} fill="clear">
+                            <IonIcon icon={personAddOutline} slot="start" />
+                            Find New Friend
+                        </IonButton>
+                        <IonButton className={styles.customizeCharacterButton} fill="clear">
+                            <IonIcon icon={brushOutline} slot="start" />
+                            Customize Character
+                        </IonButton>
                     </div>
                 </div>
-
                 {/* Tab Buttons */}
                 <IonSegment
                     value={selectedSegment}
@@ -89,12 +93,27 @@ const GainExperiencePage: React.FC = () => {
                     </IonItem>
                     </IonList>
                 )}
-
                 {/* Placeholder content for QuestPage tab */}
                 {selectedSegment === 'quest' && (
                     <div className={styles.questSection}>
-                    <h2>Quest Content</h2>
-                    <p>Details about the current quests and challenges would go here.</p>
+                        <h2>Suggested Courses</h2>
+                        <div className={styles.suggestedCoursesContainer}>
+                            <div className={styles.courseCard}>
+                                <h3>Web Development Basics</h3>
+                                <p>Learn HTML, CSS, and JavaScript fundamentals to build your first website.</p>
+                                <IonButton fill="outline" color="primary" size="small">Start Course</IonButton>
+                            </div>
+                            <div className={styles.courseCard}>
+                                <h3>Python Programming</h3>
+                                <p>Dive into Python programming with beginner-friendly lessons and projects.</p>
+                                <IonButton fill="outline" color="primary" size="small">Start Course</IonButton>
+                            </div>
+                            <div className={styles.courseCard}>
+                                <h3>Data Science Introduction</h3>
+                                <p>Get started with data analysis, statistics, and data visualization.</p>
+                                <IonButton fill="outline" color="primary" size="small">Start Course</IonButton>
+                            </div>
+                        </div>
                     </div>
                 )}
                 </IonContent>

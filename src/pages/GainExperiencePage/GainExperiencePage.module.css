@@ -1,105 +1,133 @@
+/* Profile Buttons */
+.profileButtonsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.findFriendButton,
+.customizeCharacterButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.findFriendButton {
+  --background: #4CAF50; /* Green button */
+  border-radius: 10px;
+}
+
+.customizeCharacterButton {
+  --background: #007bff; /* Blue button */
+  border-radius: 10px;
+}
+
 /* Profile Section */
 .profileContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #1B1B1B; /* Main Black */
-    padding: 20px;
-    border-radius: 15px;
-    margin: 20px;
-  }
-  
-  .avatar {
-    width: 160px;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 15px;
-  }
-  
-  .profileName {
-    font-size: 2rem;
-    color: #EFEBDF; /* Main White */
-  }
-  
-  .profileLevel {
-    font-size: 1.2rem;
-    color: #EFEBDF;
-    margin-bottom: 10px;
-  }
-  
-  /* Progress Bar Container */
-  .progressContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%; /* Adjust as needed */
-    margin-top: 5px;
-  }
-  
-  /* Text Labels */
-  .progressLabelLeft {
-    font-size: 1rem;
-    color: #EFEBDF; /* Main White */
-    margin-right: 10px;
-  }
-  
-  .progressLabelRight {
-    font-size: 1rem;
-    color: #EFEBDF; /* Main White */
-    margin-left: 10px;
-  }
-  
-  /* Progress Bar Styling */
-  .progressBar {
-    width: 100%;
-    height: 8px;
-    border-radius: 5px;
-    --progress-background: #1B1B1B; /* Dark background */
-    --progress-bar-background: #4CAF50; /* Green progress bar */
-  }
-  
-  /* Course List */
-  .courseList {
-    margin: 0 15px;
-  }
-  
-  .courseItem {
-    background: #1B1B1B; /* Main Black */
-    color: #EFEBDF; /* Main White */
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  
-  ion-label h2 {
-    color: #EFEBDF;
-  }
-  
-  ion-label p {
-    color: #A5A5A5; /* Lighter text */
-  }
-  
-  ion-note {
-    font-size: 1.2rem;
-  }
-  
-  ion-avatar {
-    background-color: #27367F; /* Primary Blue */
-    border-radius: 10px;
-    padding: 10px;
-  }
-  
-  /* QuestPage Section Placeholder */
-  .questSection {
-    padding: 20px;
-    text-align: center;
-    color: #EFEBDF;
-  }
-  
-  .nameLevelContainer {
-    display: flex;
-    align-items: bottom;
-    align-items: baseline;
-    gap: 0.5em;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1B1B1B; /* Main Black */
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+.avatar {
+  width: auto;
+  height: 300px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* New container for name and level to be side by side */
+.nameLevelContainer {
+  display: flex;
+  align-items: baseline;
+}
+
+.profileName {
+  font-size: 2rem;
+  color: #EFEBDF; /* Main White */
+  margin-right: 10px; /* Add space between name and level */
+}
+
+.profileLevel {
+  font-size: 1.2rem;
+  color: #EFEBDF;
+}
+
+/* Progress Bar Container */
+.progressContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;  /* Adjust as needed */
+  margin-top: 5px;
+}
+
+/* Text Labels */
+.progressLabelLeft {
+  font-size: 1rem;
+  color: #EFEBDF; /* Main White */
+  margin-right: 10px;
+}
+
+.progressLabelRight {
+  font-size: 1rem;
+  color: #EFEBDF; /* Main White */
+  margin-left: 10px;
+}
+
+/* Progress Bar Styling */
+.progressBar {
+  width: 100%;  /* The progress bar fills the space between the text */
+  height: 8px;  /* Custom height for the progress bar */
+  border-radius: 5px;
+  --progress-background: #1B1B1B;  /* Dark background */
+  --progress-bar-background: #4CAF50;  /* Green color for filled part */
+}
+
+/* Quest Section */
+.questSection {
+  padding: 20px;
+  text-align: center;
+  color: #EFEBDF;
+}
+
+/* Container for Suggested Courses */
+.suggestedCoursesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between cards */
+  margin-top: 15px;
+}
+
+/* Individual Course Card */
+.courseCard {
+  background-color: #1B1B1B; /* Main Black */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.courseCard h3 {
+  font-size: 1.1rem;
+  color: #EFEBDF; /* Main White */
+  margin-bottom: 5px;
+}
+
+.courseCard p {
+  font-size: 0.9rem;
+  color: #A5A5A5; /* Lighter text */
+  margin-bottom: 10px;
+}
+
+.courseCard IonButton {
+  --background: #27367F; /* Primary Blue */
+  --border-radius: 5px;
+  --border-color: #27367F;
+}
