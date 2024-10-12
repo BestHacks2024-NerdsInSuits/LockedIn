@@ -9,18 +9,15 @@ interface PageHeaderProps {
 
 export const PageHeader: React.FC<PageHeaderProps> = ({ title, large     }) => (
     <IonHeader className={styles.pageHeader} collapse={large ? "condense" : "undefined" as any}>
-        <IonToolbar className={styles.pageHeaderToolbar}>
-            <IonTitle className={styles.pageHeaderTitle} size={large ? "large" : "undefined" as any}>{title}</IonTitle>
-        </IonToolbar>
         <IonToolbar color="primary">
             <IonButtons slot="start">
                 <IonButton>
                 Settings
                 </IonButton>
             </IonButtons>
-            <IonTitle className="profile-title">Profile</IonTitle>
+            <IonTitle className="profile-title">LOCKEDIN</IonTitle>
             <IonButtons slot="end">
-                <IonButton>
+                <IonButton href="/">
                 Logout
                 </IonButton>
             </IonButtons>

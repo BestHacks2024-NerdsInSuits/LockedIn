@@ -1,13 +1,5 @@
-/* Header */
-.profileTitle {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-  }
-  
-  /* Profile Section */
-  .profileContainer {
+/* Profile Section */
+.profileContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,8 +11,8 @@
   }
   
   .avatar {
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: auto;
     border-radius: 50%;
     margin-bottom: 15px;
   }
@@ -33,17 +25,38 @@
   .profileLevel {
     font-size: 1.2rem;
     color: #EFEBDF;
+    margin-bottom: 10px;
   }
   
-  /* Segment Buttons (Quest/Progress) */
-  .segment {
-    margin: 10px 20px;
+  /* Progress Bar Container */
+  .progressContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; /* Adjust as needed */
+    margin-top: 5px;
   }
   
-  .segmentButton {
-    --color-checked: white;
-    --background-checked: #27367F; /* Primary Blue */
-    --color: #1B1B1B; /* Black when not selected */
+  /* Text Labels */
+  .progressLabelLeft {
+    font-size: 1rem;
+    color: #EFEBDF; /* Main White */
+    margin-right: 10px;
+  }
+  
+  .progressLabelRight {
+    font-size: 1rem;
+    color: #EFEBDF; /* Main White */
+    margin-left: 10px;
+  }
+  
+  /* Progress Bar Styling */
+  .progressBar {
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    --progress-background: #1B1B1B; /* Dark background */
+    --progress-bar-background: #4CAF50; /* Green progress bar */
   }
   
   /* Course List */
@@ -58,21 +71,29 @@
     margin-bottom: 10px;
   }
   
-  .courseTitle {
+  ion-label h2 {
     color: #EFEBDF;
   }
   
-  .courseSubtitle {
+  ion-label p {
     color: #A5A5A5; /* Lighter text */
   }
   
-  .courseProgress {
+  ion-note {
     font-size: 1.2rem;
   }
   
-  .courseAvatar {
+  ion-avatar {
     background-color: #27367F; /* Primary Blue */
     border-radius: 10px;
     padding: 10px;
   }
+  
+  /* Quest Section Placeholder */
+  .questSection {
+    padding: 20px;
+    text-align: center;
+    color: #EFEBDF;
+  }
+  
   
