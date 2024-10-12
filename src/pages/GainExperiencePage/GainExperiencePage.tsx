@@ -89,7 +89,7 @@ const GainExperiencePage: React.FC = () => {
                     </IonList>
                 )}
 
-                {/* Placeholder content for Quest tab */}
+                {/* Placeholder content for QuestPage tab */}
                 {selectedSegment === 'quest' && (
                     <div className={styles.questSection}>
                     <h2>Quest Content</h2>
