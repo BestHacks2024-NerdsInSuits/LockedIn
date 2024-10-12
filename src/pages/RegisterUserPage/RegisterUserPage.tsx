@@ -59,7 +59,7 @@ const RegisterUserPage: React.FC = () => {
                             required
                         />
                     </IonItem>
-                    <IonButton color="primary" expand="block" type="submit" className={`${styles.width100} ${styles.registerButton}`}>
+                    <IonButton color="{#dedbb8}" expand="block" type="submit" className={`${styles.width100} ${styles.registerButton}`}>
                         Register
                     </IonButton>
                 </form>

@@ -25,6 +25,20 @@
 .registerButton {
     margin-top: 32px;
     border-radius:0px;
+    background: #dedbb8;
+}
+
+.button-native {
+    --background: #dedbb8;
+}
+
+.registerButton > button {
+    --background: #dedbb8 !important;
+}
+
+ion-button.registerButton:host(.button-solid.ion-color) .button-native {
+    --background: #dedbb8 !important;
+    background-color: #dedbb8 !important;
 }
 
 .characterImage {
