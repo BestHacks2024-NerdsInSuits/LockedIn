@@ -1,0 +1,78 @@
+/* Header */
+.profileTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Profile Section */
+  .profileContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1B1B1B; /* Main Black */
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px;
+  }
+  
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .profileName {
+    font-size: 2rem;
+    color: #EFEBDF; /* Main White */
+  }
+  
+  .profileLevel {
+    font-size: 1.2rem;
+    color: #EFEBDF;
+  }
+  
+  /* Segment Buttons (Quest/Progress) */
+  .segment {
+    margin: 10px 20px;
+  }
+  
+  .segmentButton {
+    --color-checked: white;
+    --background-checked: #27367F; /* Primary Blue */
+    --color: #1B1B1B; /* Black when not selected */
+  }
+  
+  /* Course List */
+  .courseList {
+    margin: 0 15px;
+  }
+  
+  .courseItem {
+    background: #1B1B1B; /* Main Black */
+    color: #EFEBDF; /* Main White */
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .courseTitle {
+    color: #EFEBDF;
+  }
+  
+  .courseSubtitle {
+    color: #A5A5A5; /* Lighter text */
+  }
+  
+  .courseProgress {
+    font-size: 1.2rem;
+  }
+  
+  .courseAvatar {
+    background-color: #27367F; /* Primary Blue */
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
