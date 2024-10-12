@@ -97,6 +97,7 @@ const QuestPage: React.FC<QuestPageProps> = ({ quest }) => {
                         <p>Details about the current quests and challenges would go here.</p>
                     </div>
                 )} */}
+                <IonButton>Test quest button</IonButton>
             </IonContent>
         </PageWrapper>
     );

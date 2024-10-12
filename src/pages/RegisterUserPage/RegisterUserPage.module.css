@@ -42,7 +42,9 @@ ion-button.registerButton:host(.button-solid.ion-color) .button-native {
 }
 
 .characterImage {
-    max-width: 250px;
-    margin-bottom: 20px;
     pointer-events: none;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }

@@ -33,8 +33,16 @@ import '@ionic/react/css/palettes/dark.always.css';
 /* Theme variables */
 import './theme/variables.css';
 import RegisterUserPage from "./pages/RegisterUserPage/RegisterUserPage";
+import {Quest} from "./interfaces/Quest";
+import QuestPage from "./pages/QuestPage/QuestPage";
 
 setupIonicReact();
+
+const quest: Quest = {
+    displayTitle: "Przebiegnij 5 km",
+    content: "Przebiegnij 5 km w swojej okolicy",
+    id: "10293232"
+}
 
 const App: React.FC = () => (
   <IonApp>
@@ -42,6 +50,7 @@ const App: React.FC = () => (
       <IonRouterOutlet>
           <Route exact path="/sign-up" component={RegisterUserPage} />
           <Route path="/home" component={Home} />
+          <Route exact path="/test" render={() => <QuestPage quest={quest} />} />
           <Redirect exact from="/" to="/sign-up" />
       </IonRouterOutlet>
     </IonReactRouter>
