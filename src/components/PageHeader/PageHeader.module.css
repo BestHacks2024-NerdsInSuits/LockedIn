@@ -1,0 +1,11 @@
+.pageHeader {
+    background-color: #000000;
+}
+
+.pageHeaderToolbar {
+    --background: #000000 !important;
+}
+
+.pageHeaderTitle {
+    color: #ffffff;
+}
