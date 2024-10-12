@@ -1,0 +1,7 @@
+{
+  "name": "LockedIn",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
