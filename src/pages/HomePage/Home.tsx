@@ -20,8 +20,8 @@ import {
 import GainExperiencePage from "../GainExperiencePage/GainExperiencePage";
 import TalkWithMentorPage from "../TalkWithMentorPage/TalkWithMentorPage";
 import FightBossesPage from "../FightBossesPage/FightBossesPage";
-import {QuestListProgressItem} from "../../components/QuestListProgressItem/QuestListProgressItem";
 import QuestPage from "../QuestPage/QuestPage";
+import CustomizePage from '../CustomizePage/CustomizePage';
 
 export const HomePage: React.FC = () => {
   return (
@@ -33,8 +33,8 @@ export const HomePage: React.FC = () => {
               <Redirect exact from="/home" to="/home/gain-experience" />
               <Route path="/home/talk-with-mentor" exact component={TalkWithMentorPage} />
               <Route path="/home/fight-bosses" exact component={FightBossesPage} />
-
               <Route path="/home/gain-experience/quest" exact component={QuestPage} />
+              <Route path="/home/gain-experience/customize" exact component={CustomizePage} />
           </IonRouterOutlet>
           <IonTabBar className={styles.tabs} slot="bottom">
               <IonTabButton style={{"--background": "black !important"}} className={styles.tabButton} tab="lifestyle" href="/home/lifestyle">

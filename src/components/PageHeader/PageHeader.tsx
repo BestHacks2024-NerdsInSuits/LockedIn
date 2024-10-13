@@ -30,12 +30,16 @@ export const PageHeader: React.FC<PageHeaderProps> = ({ title, large, backButton
 
     return (
         <IonHeader className={styles.pageHeader} collapse={large ? "condense" : "undefined" as any}>
-            <IonToolbar color="primary">
-                {location.pathname != "/home/gain-experience" && location.pathname != "/home/talk-with-mentor" && location.pathname != "/home/fight-bosses" && (
+            <IonToolbar color="{#dedbb8}">
+                {location.pathname != "/home/gain-experience" &&
+                location.pathname != "/home/talk-with-mentor" &&
+                location.pathname != "/home/fight-bosses" &&
+                location.pathname != "/home/lifestyle" &&
+                location.pathname != "/home/friends" && (
                     <IonButtons slot="start">
                         <IonBackButton></IonBackButton>
                     </IonButtons>
-                )}
+                    )}
                 <IonTitle className="profile-title">
                     {title ? title : "LockedIn"}
                 </IonTitle>
@@ -46,4 +50,3 @@ export const PageHeader: React.FC<PageHeaderProps> = ({ title, large, backButton
         </IonHeader>
     )
 };
-
