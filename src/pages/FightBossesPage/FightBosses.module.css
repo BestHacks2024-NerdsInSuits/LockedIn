@@ -1,0 +1,60 @@
+/* Container for course cards */
+.container {
+    padding: 20px;
+  }
+  
+  /* Course Card Styling */
+  .courseCard {
+    background-color: #1B1B1B;  /* Dark background for a game-like feel */
+    color: #dedbb8;  /* Primary text color */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  /* Locked and Unlocked Content Styling */
+  .lockedContent,
+  .unlockedContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .lockIcon {
+    font-size: 1.5rem;
+    color: #89886f;  /* Secondary color */
+  }
+  
+  .trophyIcon {
+    font-size: 1.5rem;
+    color: #dedbb8;  /* Primary color */
+  }
+  
+  .lockBadge {
+    --background: #e74c3c;  /* Red for locked */
+    --color: white;
+    padding: 5px;
+  }
+  
+  .unlockBadge {
+    --background: #2ecc71;  /* Green for unlocked */
+    --color: white;
+    padding: 5px;
+  }
+  
+  .cardContent {
+    text-align: center;
+  }
+  
+  .cardContent p {
+    font-size: 0.9rem;
+    color: #A5A5A5;  /* Lighter text color */
+  }
+  
+  /* Button Styling */
+  IonButton {
+    --background: #89886f;  /* Secondary color */
+    --border-radius: 5px;
+  }
+  
