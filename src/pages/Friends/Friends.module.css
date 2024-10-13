@@ -1,0 +1,36 @@
+/* Container for the friend list */
+.friendList {
+    padding: 20px;
+  }
+  
+  /* Styling for each friend item */
+  .friendItem {
+    background-color: #dedbb8;  /* Primary background color */
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Friend avatar styling */
+  .friendAvatar {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  /* Friend name, level, and achievement styling */
+  .friendLabel h2 {
+    color: white;  /* Main black color */
+    margin-bottom: 5px;
+  }
+  
+  .friendLabel p {
+    color: #89886f;  /* Secondary color */
+    font-size: 0.9rem;
+  }
+  
+  /* Friend level note styling */
+  .levelNote {
+    font-size: 1rem;
+    color: #27367F;  /* Primary blue color */
+  }
+  

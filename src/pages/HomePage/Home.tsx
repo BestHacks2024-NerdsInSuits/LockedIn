@@ -22,13 +22,14 @@ import TalkWithMentorPage from "../TalkWithMentorPage/TalkWithMentorPage";
 import FightBossesPage from "../FightBossesPage/FightBossesPage";
 import QuestPage from "../QuestPage/QuestPage";
 import CustomizePage from '../CustomizePage/CustomizePage';
+import FriendsPage from '../Friends/FriendsPage';
 
 export const HomePage: React.FC = () => {
   return (
       <IonTabs>
           <IonRouterOutlet>
               <Route path="/home/lifestyle" exact component={GainExperiencePage} />
-              <Route path="/home/friends" exact component={TalkWithMentorPage} />
+              <Route path="/home/friends" exact component={FriendsPage} />
               <Route path="/home/gain-experience" exact component={GainExperiencePage} />
               <Redirect exact from="/home" to="/home/gain-experience" />
               <Route path="/home/talk-with-mentor" exact component={TalkWithMentorPage} />
