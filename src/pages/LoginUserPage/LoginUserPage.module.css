@@ -1,0 +1,50 @@
+.registerField {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.registerForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+.width100 {
+    width: 100%;
+    border-radius:0px;
+}
+
+.registerButton {
+    margin-top: 32px;
+    border-radius:0px;
+    background: #dedbb8;
+}
+
+.button-native {
+    --background: #dedbb8;
+}
+
+.registerButton > button {
+    --background: #dedbb8 !important;
+}
+
+ion-button.registerButton:host(.button-solid.ion-color) .button-native {
+    --background: #dedbb8 !important;
+    background-color: #dedbb8 !important;
+}
+
+.characterImage {
+    pointer-events: none;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}

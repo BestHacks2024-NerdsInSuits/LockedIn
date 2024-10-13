@@ -1,17 +1,47 @@
 import { clipboardOutline, codeOutline, desktopOutline, documentOutline } from "ionicons/icons";
 import { PageWrapper } from "../../components/PageWrapper/PageWrapper";
-import {IonAvatar, IonButton, IonButtons, IonContent, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonNote, IonProgressBar, IonSegment, IonSegmentButton, IonTitle, IonToolbar} from "@ionic/react";
+import {
+    IonAvatar,
+    IonButton,
+    IonButtons,
+    IonContent,
+    IonHeader,
+    IonIcon,
+    IonItem,
+    IonLabel,
+    IonList,
+    IonNote,
+    IonProgressBar,
+    IonSegment,
+    IonSegmentButton,
+    IonTitle,
+    IonToolbar,
+    useIonRouter
+} from "@ionic/react";
 import styles from "./GainExperiencePage.module.css";
 import { useState } from "react";
 import {Quest} from "../../interfaces/Quest";
+import {useLocation} from "react-router";
+import {questListProgressItems} from "../GainExperiencePage/GainExperiencePage";
 
-interface QuestPageProps {
+/* interface QuestPageProps {
     quest: Quest;
-}
+} */
 
-const QuestPage: React.FC<QuestPageProps> = ({ quest }) => {
+const QuestPage: React.FC = () => {
+    const router = useIonRouter();
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const questId = parseFloat(searchParams.get('id') as unknown as string);
+    const quest = questListProgressItems.find((quest) => quest.id === questId);
+    const remappedQuest: Quest = {
+        displayTitle: quest?.title as unknown as string,
+        content: quest?.description as unknown as string,
+        id: quest?.id.toString() as unknown as string
+    }
+
     return (
-        <PageWrapper headerName={quest.displayTitle}>
+        <PageWrapper headerName={remappedQuest.displayTitle}>
             <IonContent>
                 {/* Profile Section */}
                 {/* <div className={styles.profileContainer}>
@@ -97,7 +127,7 @@ const QuestPage: React.FC<QuestPageProps> = ({ quest }) => {
                         <p>Details about the current quests and challenges would go here.</p>
                     </div>
                 )} */}
-                <IonButton>Test quest button</IonButton>
+                <IonButton>{remappedQuest.content}</IonButton>
             </IonContent>
         </PageWrapper>
     );

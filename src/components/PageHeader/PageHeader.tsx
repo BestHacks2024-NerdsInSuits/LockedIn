@@ -12,14 +12,17 @@ import {
 import styles from "./PageHeader.module.css";
 import {caretBack, codeOutline, personCircleOutline} from "ionicons/icons";
 import {useEffect} from "react";
+import {useLocation} from "react-router";
 
 interface PageHeaderProps {
     title: string;
     large?: boolean;
+    backButton?: boolean;
 }
 
-export const PageHeader: React.FC<PageHeaderProps> = ({ title, large     }) => {
+export const PageHeader: React.FC<PageHeaderProps> = ({ title, large, backButton }) => {
     const router = useIonRouter();
+    const location = useLocation();
 
     useEffect(() => {
         console.log(router.routeInfo.prevRouteLastPathname)
@@ -28,7 +31,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({ title, large     }) => {
     return (
         <IonHeader className={styles.pageHeader} collapse={large ? "condense" : "undefined" as any}>
             <IonToolbar color="primary">
-                {router.routeInfo.prevRouteLastPathname != "/sign-up" && (
+                {location.pathname != "/home/gain-experience" && location.pathname != "/home/talk-with-mentor" && location.pathname != "/home/fight-bosses" && (
                     <IonButtons slot="start">
                         <IonBackButton></IonBackButton>
                     </IonButtons>

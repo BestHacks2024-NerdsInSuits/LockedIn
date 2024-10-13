@@ -3,7 +3,41 @@ import { PageWrapper } from "../../components/PageWrapper/PageWrapper";
 import {IonAvatar, IonButton, IonButtons, IonContent, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonNote, IonProgressBar, IonSegment, IonSegmentButton, IonTitle, IonToolbar} from "@ionic/react";
 import styles from "./GainExperiencePage.module.css";
 import { useState } from "react";
-  
+import {
+    QuestListProgressItem,
+    QuestListProgressItemProps
+} from "../../components/QuestListProgressItem/QuestListProgressItem";
+
+export const questListProgressItems: QuestListProgressItemProps[] = [
+    {
+        title: "BestHacks",
+        description: "Is it working?",
+        progressAmount: 100,
+        icon: desktopOutline,
+        id: 1
+    },
+    {
+        title: "Python Course I",
+        description: "Lesson 6 | Print Command",
+        progressAmount: 75,
+        icon: codeOutline,
+        id: 2
+    },
+    {
+        title: "Business Course",
+        description: "Lesson 3 | Agile Management",
+        progressAmount: 55,
+        icon: clipboardOutline,
+        id: 3
+    },
+    {
+        title: "Java Course Advanced",
+        description: "Lesson 1 | Introduction",
+        progressAmount: 5,
+        icon: documentOutline,
+        id: 4
+    }
+];
 
 const GainExperiencePage: React.FC = () => {
     // Add useState for handling the selected segment
@@ -48,49 +82,16 @@ const GainExperiencePage: React.FC = () => {
                 {/* Conditional Content based on selected segment */}
                 {selectedSegment === 'progress' && (
                     <IonList className={styles.courseList}>
-                    <IonItem lines="full">
-                        <IonAvatar slot="start">
-                        <IonIcon icon={desktopOutline} />
-                        </IonAvatar>
-                        <IonLabel>
-                        <h2>BestHacks</h2>
-                        <p>Is it working?</p>
-                        </IonLabel>
-                        <IonNote slot="end" color="primary">100%</IonNote>
-                    </IonItem>
-
-                    <IonItem lines="full">
-                        <IonAvatar slot="start">
-                        <IonIcon icon={codeOutline} />
-                        </IonAvatar>
-                        <IonLabel>
-                        <h2>Python Course I</h2>
-                        <p>Lesson 6 | Print Command</p>
-                        </IonLabel>
-                        <IonNote slot="end" color="primary">75%</IonNote>
-                    </IonItem>
-
-                    <IonItem lines="full">
-                        <IonAvatar slot="start">
-                        <IonIcon icon={clipboardOutline} />
-                        </IonAvatar>
-                        <IonLabel>
-                        <h2>Business Course</h2>
-                        <p>Lesson 3 | Agile Management</p>
-                        </IonLabel>
-                        <IonNote slot="end" color="primary">55%</IonNote>
-                    </IonItem>
-
-                    <IonItem lines="full">
-                        <IonAvatar slot="start">
-                        <IonIcon icon={documentOutline} />
-                        </IonAvatar>
-                        <IonLabel>
-                        <h2>Java Course Advanced</h2>
-                        <p>Lesson 1 | Introduction</p>
-                        </IonLabel>
-                        <IonNote slot="end" color="primary">5%</IonNote>
-                    </IonItem>
+                        {questListProgressItems.map((questListProgressItem, index) => (
+                            <QuestListProgressItem
+                                key={index}
+                                title={questListProgressItem.title}
+                                description={questListProgressItem.description}
+                                icon={questListProgressItem.icon}
+                                progressAmount={questListProgressItem.progressAmount}
+                                id={questListProgressItem.id}
+                            />
+                        ))}
                     </IonList>
                 )}
                 {/* Placeholder content for QuestPage tab */}

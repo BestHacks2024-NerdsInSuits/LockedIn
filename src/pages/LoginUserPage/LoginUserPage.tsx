@@ -9,10 +9,10 @@ import {
     IonPage,
     IonTitle,
     IonToolbar,
-    IonImg, useIonRouter, IonText, IonNavLink
+    IonImg, useIonRouter, IonText
 } from '@ionic/react';
 
-import styles from './RegisterUserPage.module.css';
+import styles from './LoginUserPage.module.css';
 
 import character from "/assets/img/LockInLock.png";
 
@@ -20,12 +20,12 @@ import React, { useState } from "react";
 import {PageWrapper} from "../../components/PageWrapper/PageWrapper";
 import {Link} from "react-router-dom";
 
-const RegisterUserPage: React.FC = () => {
+const LoginUserPage: React.FC = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const { push } = useIonRouter()
+    const { push } = useIonRouter();
 
-    const handleRegister = (e: React.FormEvent) => {
+    const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
 
         if (email.length > 0 && password.length > 0) {
@@ -37,7 +37,7 @@ const RegisterUserPage: React.FC = () => {
         <PageWrapper>
             <div className={`${styles.registerField} ${styles.backgroundBlack}`}>
                 <IonImg src={character} alt="character" className={styles.characterImage} />
-                <form onSubmit={handleRegister} className={styles.registerForm}>
+                <form onSubmit={handleLogin} className={styles.registerForm}>
                     <IonItem className={`${styles.registerFormItem} ${styles.ionBackgroundBlack}`}>
                         <IonInput
                             labelPlacement="floating"
@@ -61,10 +61,10 @@ const RegisterUserPage: React.FC = () => {
                         />
                     </IonItem>
                     <IonText className="ion-margin-top">
-                        Already registered? Click <Link to="/sign-in">here</Link>
+                        Not registered yet? Click <Link to="/sign-up">here</Link>
                     </IonText>
                     <IonButton color="{#dedbb8}" expand="block" type="submit" className={`${styles.width100} ${styles.registerButton}`}>
-                        Register
+                        Login
                     </IonButton>
                 </form>
             </div>
@@ -72,4 +72,4 @@ const RegisterUserPage: React.FC = () => {
     );
 };
 
-export default RegisterUserPage;
+export default LoginUserPage;
