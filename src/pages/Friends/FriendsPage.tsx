@@ -58,7 +58,7 @@ const FriendsPage: React.FC = () => {
       </IonList>
         {/* Add More Button */}
         <div className={styles.buttonContainer}>
-            <IonButton expand="block" onClick={addMoreFriends}>
+            <IonButton className={styles.IonButton} expand="block" onClick={addMoreFriends}>
                 Add More
             </IonButton>
       </div>

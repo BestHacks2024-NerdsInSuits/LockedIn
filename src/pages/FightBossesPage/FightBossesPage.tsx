@@ -61,7 +61,7 @@ const FightBossesPage: React.FC = () => {
                     <div className={styles.unlockedContent}>
                     <IonIcon icon={trophyOutline} className={styles.trophyIcon} />
                     <IonBadge color="success" className={styles.unlockBadge}>Unlocked</IonBadge>
-                    <IonButton color="primary" fill="solid" size="small">Start Course</IonButton>
+                    <IonButton className={styles.IonButton} size="small">Start Course</IonButton>
                     </div>
                 )}
                 </IonCardContent>
