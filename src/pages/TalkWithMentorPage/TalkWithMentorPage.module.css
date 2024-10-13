@@ -1,0 +1,45 @@
+/* Grid for mentors */
+.mentorGrid {
+    padding: 20px;
+  }
+  
+  /* Mentor card */
+  .mentorCard {
+    background-color: #1b1b1b;  /* Dark background for mentor card */
+    color: #dedbb8;  /* Primary color for text */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Mentor image */
+  .mentorImage {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  /* Card title and subtitle */
+  IonCardTitle {
+    font-size: 1.5rem;
+    color: #dedbb8; /* Primary text color */
+  }
+  
+  IonCardSubtitle {
+    color: #89886f; /* Secondary color */
+    font-size: 1rem;
+  }
+  
+  /* Card content styling */
+  IonCardContent {
+    color: #A5A5A5; /* Lighter text for analysis */
+    padding: 15px;
+  }
+  
+  .moreInfoButton {
+    --background: #89886f;  /* Secondary color */
+    --border-radius: 5px;
+    margin-top: 15px;
+  }
+  

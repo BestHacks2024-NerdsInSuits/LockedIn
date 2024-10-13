@@ -34,3 +34,13 @@
     color: #27367F;  /* Primary blue color */
   }
   
+  /* Container for the Add More button */
+.buttonContainer {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  IonButton {
+    --background: #27367F; /* Primary blue color */
+    --border-radius: 10px;
+  }
