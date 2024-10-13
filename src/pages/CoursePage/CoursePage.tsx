@@ -26,24 +26,26 @@ import {
     IonToolbar,
     useIonRouter
 } from "@ionic/react";
-import styles from "./QuestPage.module.css";
+import styles from "./CoursePage.module.css";
 import { useState } from "react";
 import {Quest} from "../../interfaces/Quest";
 import {useLocation} from "react-router";
-import {questListProgressItems} from "../GainExperiencePage/GainExperiencePage";
+import {coursesListItems, questListProgressItems} from "../GainExperiencePage/GainExperiencePage";
 import chest from "../../images/chest.png"
+import {Course} from "../../interfaces/Course";
 
-const QuestPage: React.FC = () => {
+const CoursePage: React.FC = () => {
     const router = useIonRouter();
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
-    const questId = parseFloat(searchParams.get('id') as unknown as string);
-    const quest = questListProgressItems.find((quest) => quest.id === questId);
-    const remappedQuest: Quest = {
-        displayTitle: quest?.title as unknown as string,
-        content: quest?.description as unknown as string,
-        id: quest?.id.toString() as unknown as string
+    const courseId = searchParams.get('id') as unknown as string;
+    const course = coursesListItems.find((course) => course.id === courseId);
+    const remappedQuest: Course = {
+        displayTitle: course?.displayTitle as unknown as string,
+        description: course?.description as unknown as string,
+        id: course?.id.toString() as unknown as string
     };
+
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => {
@@ -150,4 +152,4 @@ const QuestPage: React.FC = () => {
     );
 };
 
-export default QuestPage;
+export default CoursePage;

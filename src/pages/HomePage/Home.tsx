@@ -23,6 +23,7 @@ import FightBossesPage from "../FightBossesPage/FightBossesPage";
 import QuestPage from "../QuestPage/QuestPage";
 import CustomizePage from '../CustomizePage/CustomizePage';
 import FriendsPage from '../Friends/FriendsPage';
+import CoursePage from "../CoursePage/CoursePage";
 
 export const HomePage: React.FC = () => {
   return (
@@ -35,6 +36,7 @@ export const HomePage: React.FC = () => {
               <Route path="/home/talk-with-mentor" exact component={TalkWithMentorPage} />
               <Route path="/home/fight-bosses" exact component={FightBossesPage} />
               <Route path="/home/gain-experience/quest" exact component={QuestPage} />
+              <Route path="/home/gain-experience/course" exact component={CoursePage} />
               <Route path="/home/gain-experience/customize" exact component={CustomizePage} />
           </IonRouterOutlet>
           <IonTabBar className={styles.tabs} slot="bottom">

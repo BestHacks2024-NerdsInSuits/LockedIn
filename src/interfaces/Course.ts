@@ -1,7 +1,5 @@
-import {Quest} from "./Quest";
-
-interface Course {
+export interface Course {
     displayTitle: string;
-    quests: Quest[];
+    description: string;
     id: string;
 }

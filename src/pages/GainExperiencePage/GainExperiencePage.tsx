@@ -1,12 +1,30 @@
 import { brushOutline, clipboardOutline, codeOutline, desktopOutline, documentOutline, personAddOutline } from "ionicons/icons";
 import { PageWrapper } from "../../components/PageWrapper/PageWrapper";
-import {IonAvatar, IonButton, IonButtons, IonContent, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonNote, IonProgressBar, IonSegment, IonSegmentButton, IonTitle, IonToolbar} from "@ionic/react";
+import {
+    IonAvatar,
+    IonButton,
+    IonButtons,
+    IonContent,
+    IonHeader,
+    IonIcon,
+    IonItem,
+    IonLabel,
+    IonList,
+    IonNote,
+    IonProgressBar,
+    IonSegment,
+    IonSegmentButton,
+    IonTitle,
+    IonToolbar,
+    useIonRouter
+} from "@ionic/react";
 import styles from "./GainExperiencePage.module.css";
 import { useState } from "react";
 import {
     QuestListProgressItem,
     QuestListProgressItemProps
 } from "../../components/QuestListProgressItem/QuestListProgressItem";
+import {Course} from "../../interfaces/Course";
 
 export const questListProgressItems: QuestListProgressItemProps[] = [
     {
@@ -39,9 +57,33 @@ export const questListProgressItems: QuestListProgressItemProps[] = [
     }
 ];
 
+export const coursesListItems: Course[] = [
+    {
+        displayTitle: "Web Development Basics",
+        description: "Learn HTML, CSS, and JavaScript fundamentals to build your first website.",
+        id: "10212021"
+    },
+    {
+        displayTitle: "Python Programming",
+        description: "Dive into Python programming with beginner-friendly lessons and projects.",
+        id: "838283193819"
+    },
+    {
+        displayTitle: "Data Science Introduction",
+        description: "Get started with data analysis, statistics, and data visualization.",
+        id: "671261261"
+    }
+]
+
 const GainExperiencePage: React.FC = () => {
     // Add useState for handling the selected segment
     const [selectedSegment, setSelectedSegment] = useState<'quest' | 'progress'>('progress');
+    const router = useIonRouter();
+
+    const openCourse = (course: Course) => {
+        router.push(`/home/gain-experience/course?id=${course.id}`)
+    }
+
     return (
         <PageWrapper headerName="LockedIn">
             {/* Content */}
@@ -94,26 +136,20 @@ const GainExperiencePage: React.FC = () => {
                         ))}
                     </IonList>
                 )}
-                {/* Placeholder content for QuestPage tab */}
+                {/* Placeholder content for CoursePage tab */}
                 {selectedSegment === 'quest' && (
                     <div className={styles.questSection}>
                         <h2>Suggested Courses</h2>
                         <div className={styles.suggestedCoursesContainer}>
-                            <div className={styles.courseCard}>
-                                <h3>Web Development Basics</h3>
-                                <p>Learn HTML, CSS, and JavaScript fundamentals to build your first website.</p>
-                                <IonButton fill="outline" color="primary" size="small">Start Course</IonButton>
-                            </div>
-                            <div className={styles.courseCard}>
-                                <h3>Python Programming</h3>
-                                <p>Dive into Python programming with beginner-friendly lessons and projects.</p>
-                                <IonButton fill="outline" color="primary" size="small">Start Course</IonButton>
-                            </div>
-                            <div className={styles.courseCard}>
-                                <h3>Data Science Introduction</h3>
-                                <p>Get started with data analysis, statistics, and data visualization.</p>
-                                <IonButton fill="outline" color="primary" size="small">Start Course</IonButton>
-                            </div>
+                            {coursesListItems.map((course, index) => (
+                                <div key={index} className={styles.courseCard}>
+                                    <h3>{course.displayTitle}</h3>
+                                    <p>{course.description}</p>
+                                    <IonButton onClick={() => openCourse(course)} fill="outline" color="primary" size="small">
+                                        Start Course
+                                    </IonButton>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 )}

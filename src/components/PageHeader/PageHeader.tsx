@@ -35,7 +35,8 @@ export const PageHeader: React.FC<PageHeaderProps> = ({ title, large, backButton
                 location.pathname != "/home/talk-with-mentor" &&
                 location.pathname != "/home/fight-bosses" &&
                 location.pathname != "/home/lifestyle" &&
-                location.pathname != "/home/friends" && (
+                location.pathname != "/home/friends" &&
+                backButton && (
                     <IonButtons slot="start">
                         <IonBackButton></IonBackButton>
                     </IonButtons>
