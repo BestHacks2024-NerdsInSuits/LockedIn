@@ -59,7 +59,7 @@ const GainExperiencePage: React.FC = () => {
                             <IonIcon icon={personAddOutline} slot="start" />
                             Find New Friend
                         </IonButton>
-                        <IonButton className={styles.customizeCharacterButton} fill="clear">
+                        <IonButton className={styles.customizeCharacterButton} fill="clear" href="/home/gain-experience/customize">
                             <IonIcon icon={brushOutline} slot="start" />
                             Customize Character
                         </IonButton>

@@ -20,6 +20,7 @@
   width: 100%;
   height: auto;
   border-bottom: 1px solid #89886f; /* Use your secondary color */
+  padding:15px;
 }
 
 /* Card Content */
